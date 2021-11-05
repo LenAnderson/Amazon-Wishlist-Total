@@ -2,12 +2,12 @@
 // @name         Amazon - Wishlist Total
 // @namespace    https://github.com/LenAnderson/
 // @downloadURL  https://github.com/LenAnderson/Amazon-Wishlist-Total/raw/master/amazon_wishlist_total.user.js
-// @version      2.0
+// @version      2.1
 // @description  Show the total cost for all items on an Amazon wishlist
 // @author       LenAnderson
-// @match        https://www.amazon.de/hz/wishlist/*
-// @match        https://www.amazon.com/hz/wishlist/*
-// @match        https://www.amazon.co.uk/hz/wishlist/*
+// @match        https://www.amazon.de/*/wishlist/*
+// @match        https://www.amazon.com/*/wishlist/*
+// @match        https://www.amazon.co.uk/*/wishlist/*
 // @grant        none
 // ==/UserScript==
 
