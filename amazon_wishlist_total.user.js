@@ -2,7 +2,7 @@
 // @name         Amazon - Wishlist Total
 // @namespace    https://github.com/LenAnderson/
 // @downloadURL  https://github.com/LenAnderson/Amazon-Wishlist-Total/raw/master/amazon_wishlist_total.user.js
-// @version      2.1
+// @version      2.5
 // @description  Show the total cost for all items on an Amazon wishlist
 // @author       LenAnderson
 // @match        https://www.amazon.de/*/wishlist/*
@@ -79,7 +79,8 @@
 					total[curr] = 0.0;
 				}
 				const val = parseFloat(`${$(item, '.a-price-whole').childNodes[0].textContent}.${$(item, '.a-price-fraction').textContent}`);
-				total[curr] += val;
+				const cnt = parseInt($(item, '[id^="itemRequested_"]')?.textContent?.trim() ?? 0) - parseInt($(item, '[id^="itemPurchased_"]')?.textContent?.trim() ?? 0);
+				total[curr] += val * (cnt || 1);
 			}
 		});
 		curHtml = await loadMore(curHtml);
